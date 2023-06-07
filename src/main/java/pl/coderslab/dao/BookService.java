@@ -1,6 +1,6 @@
 package pl.coderslab.dao;
 
-import pl.coderslab.simple.Book;
+import pl.coderslab.entity.Book;
 
 import java.util.List;
 import java.util.Optional;

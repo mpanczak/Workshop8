@@ -1,4 +1,4 @@
-package pl.coderslab.simple;
+package pl.coderslab.entity;
 
 import javax.persistence.*;
 

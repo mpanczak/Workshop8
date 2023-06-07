@@ -1,7 +1,7 @@
 package pl.coderslab.dao;
 
 import org.springframework.stereotype.Component;
-import pl.coderslab.simple.Book;
+import pl.coderslab.entity.Book;
 
 import java.util.ArrayList;
 import java.util.List;
