@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.coderslab.dao.BookService;
 import pl.coderslab.entity.Book;
@@ -35,5 +36,17 @@ public class ManageBookController {
         List<Book> books = book.map(Collections::singletonList).orElse(Collections.emptyList());
         model.addAttribute("books", books);
         return "/books/single";
+    }
+
+    @GetMapping("/add")
+    public String showAddBookForm(Model model) {
+        Book book = new Book();
+        model.addAttribute(book);
+        return "/books/add";
+    }
+
+    @PostMapping("/add")
+    public String processAddBookForm(Model model) {
+        return "redirect:/books/all";
     }
 }
